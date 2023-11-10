@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Col, Row } from "react-bootstrap"
 import { useDispatch } from "react-redux";
 import { selectAlbum } from "../redux/actions";
+import { Heart, HeartFill } from "react-bootstrap-icons";
 
 const Home = () => {
      const [queenAlbums, setQueenAlbums] = useState([]);
@@ -84,7 +85,10 @@ const Home = () => {
                         style={{ cursor: 'pointer' }}
                         />
                         <p>{data.title}</p>
-                        <p>{data.artist.name}</p>
+                        <div className="d-flex align-items-center">
+                        {selectedImage === data ? <HeartFill className="ms-5"/> : <Heart className="ms-5" />}
+                        <p className="ms-5">{data.artist.name}</p>
+                        </div>
                       </Col>
                       ))}
                     </Row>
@@ -110,7 +114,10 @@ const Home = () => {
                         style={{ cursor: 'pointer' }}
                         />
                         <p>{data.title}</p>
-                        <p>{data.artist.name}</p>
+                        <div className="d-flex align-items-center">
+                        {selectedImage === data ? <HeartFill className="ms-5"/> : <Heart className="ms-5" />}
+                        <p className="ms-5">{data.artist.name}</p>
+                        </div>
                       </Col>
                       ))}
                     </Row>
@@ -134,7 +141,10 @@ const Home = () => {
                         style={{ cursor: 'pointer' }}
                         />
                         <p>{data.title}</p>
-                        <p>{data.artist.name}</p>
+                        <div className="d-flex align-items-center">
+                        {selectedImage === data ? <HeartFill className="ms-5"/> : <Heart className="ms-5" />}
+                        <p className="ms-5">{data.artist.name}</p>
+                        </div>
                       </Col>
                       ))}
                     </Row>
