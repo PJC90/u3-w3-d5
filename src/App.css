@@ -177,3 +177,7 @@ ul {
 .mainPage img {
   width: 200px;
 }
+
+.click{
+  border: 10px solid white;
+}

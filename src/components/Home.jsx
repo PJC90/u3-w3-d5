@@ -80,7 +80,7 @@ const Home = () => {
                       {queenAlbums.slice(0, 4).map((data) => (
                         <Col key={data.id} className="text-center">
                         <img src={data.album.cover_medium} alt={data.album.title} 
-                        className={selectedImage ? "custom-border" : ""}
+                        className={selectedImage === data ? "click" : ""}
                         onClick={() => changeArtist(data)}
                         style={{ cursor: 'pointer' }}
                         />
@@ -142,7 +142,7 @@ const Home = () => {
                         />
                         <p>{data.title}</p>
                         <div className="d-flex align-items-center">
-                        {selectedImage === data ? <HeartFill className="ms-5"/> : <Heart className="ms-5" />}
+                        {selectedImage === data && <HeartFill className="ms-5"/>}
                         <p className="ms-5">{data.artist.name}</p>
                         </div>
                       </Col>
